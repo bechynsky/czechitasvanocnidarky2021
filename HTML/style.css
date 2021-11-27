@@ -2,6 +2,7 @@ body {
     font-size: 20px;
     line-height: 1.5;
     margin: 0;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 h1 {
@@ -12,6 +13,7 @@ h1 {
 
 h3 {
     font-size: 24px;
+    font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
 }
 
@@ -19,7 +21,7 @@ h3 {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #282425;
+    background-color: #df649dff;
 }
 
 .menu li {
@@ -55,15 +57,17 @@ h3 {
     float: left;
     width: 70%;
     padding: 15px;
-    height: 800px;
+    height: 840px;
     background-image: url(../grafika/Stomecek1.png);
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0
+    margin: 0;
+    padding: 0;
+    overflow: auto
 }
 
 .column_side {
-    float: right;
+    s float: right;
     width: 30%;
     padding: 15px;
     text-align: left;
@@ -75,7 +79,7 @@ h3 {
     display: block;
     text-align: center;
     padding: 3px;
-    background-color: #282425;
+    background-color: #df649dff;
     color: white;
     ;
 }
@@ -185,9 +189,14 @@ img {
     overflow: auto;
 }
 
-
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
+    font-family: "Lucida Console", "Courier New", monospace;
+    ;
     padding: 20px;
-  }
+}
+
+.form {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
