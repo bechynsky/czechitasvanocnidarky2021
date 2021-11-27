@@ -49,19 +49,29 @@ h3 {
     display: table;
     clear: both;
   }
-.column main {
+
+  .column {
+    float: left;
+    padding: 10px;
+  }
+ .column.main {
     float: left;
     width: 75%;
     padding: 15px;
   }
 
-  .column {
+  .column.side {
     float: left;
     width: 25%;
     padding: 15px;
   }
 
+  @media screen and (max-width: 600px) {
+    .column.side, .column.main {
+      width: 100%;
+    }
   .footer {
+    font-size: 12px;
     display: block;
     text-align: center;
     padding: 3px;
