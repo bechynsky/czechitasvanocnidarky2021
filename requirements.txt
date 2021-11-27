@@ -1,4 +1,7 @@
 django
+django-allauth
+django-sslserver
 psycopg2
 psycopg2-binary
 python-decouple
+
