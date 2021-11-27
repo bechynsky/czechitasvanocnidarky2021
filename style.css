@@ -44,6 +44,32 @@ h3 {
     background-color: #756158;
 }
 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.column main {
+    float: left;
+    width: 75%;
+    padding: 15px;
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+    padding: 15px;
+  }
+
+  .footer {
+    display: block;
+    text-align: center;
+    padding: 3px;
+    background-color: #282425;
+    color: white;;
+  }
+
+.strom_prani img {}
 .stromecek {
     margin: 0
 }
