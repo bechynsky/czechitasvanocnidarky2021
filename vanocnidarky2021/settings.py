@@ -16,6 +16,8 @@ from decouple import AutoConfig
 
 config = AutoConfig(os.environ.get('DJANGO_CONFIG_ENV_DIR'))
 
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -87,15 +89,15 @@ WSGI_APPLICATION = 'vanocnidarky2021.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-hostname = os.environ['DBHOST'] or "vanoce"
-user = config("DBUSER") or "czechitas"
+hostname = os.environ.get('DBHOST', 'vanoce')
+user = config("DBUSER", default='czechitas')
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        'NAME': config('DBNAME') or "vanocedarky" ,
+        'NAME': config('DBNAME', default='vanocedarky'),
         'USER': user + "@" + hostname,
-        'PASSWORD': config('DBPASS') or "Cz3ch1t@s",
+        'PASSWORD': config('DBPASS', default='Cz3ch1t@s'),
         'HOST': hostname + ".postgres.database.azure.com",
         'PORT': config('DBPORT', default='5432'),
         'OPTIONS': {'sslmode': 'require'}
