@@ -24,7 +24,7 @@ class Instituce(models.Model):
     heslo = models.CharField(max_length=50)
     telefon = models.CharField(max_length=20)
     web = models.CharField(max_length=80, blank=True)
-    fb_stranka = models.CharField(max_length=80, blank=True)
+    fb_stranka = models.CharField(max_length=80, blank=True, null=True)
     ulice = models.CharField(max_length=60, blank=True) 
     cislo = models.IntegerField(blank=True)
     psc = models.IntegerField(blank=True)
