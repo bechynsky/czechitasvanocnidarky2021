@@ -48,36 +48,39 @@ h3 {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
-  .column {
+.column {
     float: left;
     padding: 10px;
-  }
- .column.main {
+}
+
+.column.main {
     float: left;
     width: 75%;
     padding: 15px;
-  }
+}
 
-  .column.side {
+.column.side {
     float: right;
     width: 25%;
     padding: 15px;
     text-align: left;
-  }
+}
 
-
-  .footer {
+.footer {
     font-size: 12px;
     display: block;
     text-align: center;
     padding: 3px;
     background-color: #282425;
-    color: white;;
-  }
+    color: white;
+    ;
+}
 
-.strom_prani img {}
-.stromecek {
-    margin: 0
+.column-main {
+    height: 600px;
+    background-image: url(grafika/Stomecek1.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
