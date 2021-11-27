@@ -1,0 +1,56 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+{% load account socialaccount %}
+<div class="container" style="text-align: center; padding-top: 10%;">
+    <h1>Přihlášení</h1>
+  
+    <br /><br />
+    {% if user.is_authenticated %}
+        <h3>Rádi Vás vidíme {{ user.username }} !</h3>
+        <br /><br />
+        {% get_social_accounts user as accounts %}
+        {% if not accounts.facebook %}
+        <!-- facebook button starts here -->
+        <a href="{% provider_login_url 'facebook'  process='connect' %}" class="btn btn-secondary">
+            <i class="fa fa-facebook fa-fw"></i>
+            <span>Připojit Facebook účet</span>
+        </a>
+        <!-- facebook button ends here -->
+        {% endif %}
+        {% if not accounts.google %}
+        <!-- Google button starts here -->
+        <a href="{% provider_login_url 'google'  process='connect' %}" class="btn btn-secondary">
+            <i class="fa fa-google fa-fw"></i>
+            <span>Připojit Google účet</span>
+        </a>
+        <!-- Google button ends here -->
+        {% endif %}
+        
+    <a href="{% url 'account_logout' %}" class="btn btn-danger">Odhlásit se</a>
+    {% else %}
+
+    <form class="login" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="btn btn-success" type="submit">Přihlásit</button>
+        <a class="btn btn-outline-danger" type="reset"¨href="{% url 'account_reset_password' %}">Obnovit heslo</a>   
+    </form>
+    <!-- facebook button starts here -->
+    <a href="{% provider_login_url 'facebook' %}" class="btn btn-outline-primary btn-sm">
+        <i class="fa fa-facebook fa-fw"></i>
+        <span>Přihlásit přes Facebook</span>
+    </a>
+    <!-- facebook button ends here -->
+    <!-- Google button starts here -->
+    <a href="{% provider_login_url 'google' %}" class="btn btn-outline-secondary btn-sm">
+        <i class="fa fa-google fa-fw"></i>
+        <span>Přihlásit přes Google</span>
+    </a>
+        <!-- Google button ends here -->
+    {% endif %}
+{% endblock content %}

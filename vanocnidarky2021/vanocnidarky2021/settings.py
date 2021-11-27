@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,6 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django.contrib.sites",
+    # 3rd party
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "sslserver",
+    # social providers
+    "allauth.socialaccount.providers.facebook",
+    "allauth.socialaccount.providers.google",
 ]
 
 MIDDLEWARE = [
@@ -55,7 +65,7 @@ ROOT_URLCONF = 'vanocnidarky2021.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS':  [str(BASE_DIR.joinpath("templates"))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +90,8 @@ DATABASES = {
         'NAME': 'vanocedarky',
         'USER': 'czechitas@vanoce',
         'PASSWORD': 'Cz3ch1t@s',
-        'HOST': 'vanoce.postgres.database.azure.com'
+        'HOST': 'vanoce.postgres.database.azure.com',
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 
@@ -123,7 +134,23 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+SITE_ID = 2
+ACCOUNT_EMAIL_VERIFICATION = "none"
+LOGIN_REDIRECT_URL = "index"
+ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_EMAIL_REQUIRED = True
+SOCIALACCOUNT_QUERY_EMAIL = True
+# Users use email as their login name.
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
