@@ -6,13 +6,8 @@ body {
 
 h1 {
     font-size: 60px;
+    font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
-}
-
-h2 {
-    font-size: 48px;
-    text-align: center;
-    margin-top: 0px;
 }
 
 h3 {
@@ -58,14 +53,13 @@ h3 {
 
 .column_main {
     float: left;
-    width: 65%;
+    width: 70%;
     padding: 15px;
-    height: 850px;
+    height: 800px;
     background-image: url(../grafika/Stomecek1.png);
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0;
-    overflow: auto
+    margin: 0
 }
 
 .column_side {
@@ -139,7 +133,7 @@ h3 {
 
 .obr9 {
     top: 85%;
-    left: 55%
+    left: 60%
 }
 
 .obr10 {
@@ -184,15 +178,16 @@ h3 {
 
 .obr18 {
     top: 94%;
-    left: 35%
+    left: 35%;
 }
 
 img {
     overflow: auto;
 }
 
+
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-}
+  }
