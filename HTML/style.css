@@ -38,7 +38,8 @@ h3 {
 .menu a:hover,
 .menu a:focus,
 .menu a:active {
-    background-color: #756158;
+    background-color: #e7ad00ff
+    ;
 }
 
 .row:after {
