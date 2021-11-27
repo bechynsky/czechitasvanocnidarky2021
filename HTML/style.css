@@ -60,7 +60,7 @@ h3 {
     float: left;
     width: 75%;
     padding: 15px;
-    height: 600px;
+    height: 800px;
     background-image: url(../grafika/Stomecek1.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -83,4 +83,10 @@ h3 {
     background-color: #282425;
     color: white;
     ;
+}
+
+.column_main img {
+    width: 8%;
+    position: relative;
+    top: 80%
 }
