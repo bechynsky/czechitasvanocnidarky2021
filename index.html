@@ -32,6 +32,8 @@
         document.getElementById("medailonek").value = obrazek.getAttribute("medailonek");
         document.getElementById("prani").value = obrazek.getAttribute("prani");
         document.getElementById("odkaz").value = obrazek.getAttribute("odkaz");
+
+        document.getElementById("formular").className = "container";
     }
 </script>
 
@@ -75,7 +77,7 @@
         <img id="img17" class ="obr17"src="grafika/darky/darek6.png" alt="darek" id="17" jmeno="Heda Průchová" vek="9"
              medailonek="Medailonek Petr" prani="koloběžka" odkaz="https://ikea.cz" onclick="vypln_formular(this)">
         <img id="img18" class ="obr18"src="grafika/darky/darek7.png" alt="darek" id="18" jmeno="Martina Nováková" vek="8"
-             medailonek="Medailonek Petr" prani="koloběžka" odkaz="https://sportisimo.cz" onclick="vypln_formular(this)"> -->
+             medailonek="Medailonek Petr" prani="koloběžka" odkaz="https://sportisimo.cz" onclick="vypln_formular(this)">
 
 
 
@@ -86,7 +88,7 @@
             <p><i>I Vy můžete pomoci někomu udělat krásné Vánoce.</i></p>
             <p><i>Stačí se zaregistrovat výše v menu a následně vybrat kliknutím jeden z dárečků pod stromečkem.</i></p>
 
-            <div class="container">
+            <div id="formular" class="container skryj">
               <form action="/action_page.php">
 
               <input type="hidden" id_darce="">
@@ -113,6 +115,7 @@
 
               <input type="submit" value="Obdarovat">
               <input type="submit" value="Vybrat jiné přání">
+              </form>
              </div>
 
             </form>
