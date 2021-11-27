@@ -67,7 +67,7 @@ h3 {
 }
 
 .column_side {
-    s float: right;
+    float: right;
     width: 30%;
     padding: 15px;
     text-align: left;
