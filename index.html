@@ -17,53 +17,66 @@
 <!-- Menu -->
 <div class="topnav">
     <ul class="menu">
-        <li> <a href="#strom_prani"> Strom přání</a></li>
+        <li> <a href="#strom_prani"> Domů - Strom přání</a></li>
         <li> <a href="#o_projektu"> O projektu </a></li>
         <li> <a href="#prihlaseni"> Přihlášení</a></li>
         <li> <a href="#kontakt"> Kontakt<a></li>
  </ul>
 </div>
 
+<script>
+    function vypln_formular(obrazek)
+    {
+        document.getElementById("name").value = obrazek.getAttribute("jmeno");
+        document.getElementById("vek").value = obrazek.getAttribute("vek");
+    }
+</script>
+
 <body>
 
  <!-- Sloupce -->
  <div class="row">
-    <div class="column_main"> 
-    <img class ="obr1" src="grafika/darky/darek10.png" alt="darek">
-    <img class ="obr2" src="grafika/darky/darek7.png" alt="darek">
-    <img class ="obr3" src="grafika/darky/darek2.png" alt="darek">
-    <img class ="obr4" src="grafika/darky/darek3.png" alt="darek">
-    <img class ="obr5" src="grafika/darky/darek9.png" alt="darek">
-    <img class ="obr6" src="grafika/darky/darek4.png" alt="darek">
-    <img class ="obr7" src="grafika/darky/darek5.png" alt="darek">
-    <img class ="obr8" src="grafika/darky/darek6.png" alt="darek">
-    <img class ="obr9" src="grafika/darky/darek7.png" alt="darek">
-    <img class ="obr10" src="grafika/darky/darek10.png" alt="darek">
-    <img class ="obr11" src="grafika/darky/darek7.png" alt="darek">
-    <img class ="obr12" src="grafika/darky/darek2.png" alt="darek">
-    <img class ="obr13" src="grafika/darky/darek3.png" alt="darek">
-    <img class ="obr14" src="grafika/darky/darek9.png" alt="darek">
-    <img class ="obr15" src="grafika/darky/darek4.png" alt="darek">
-    <img class ="obr16" src="grafika/darky/darek5.png" alt="darek">
-    <img class ="obr17" src="grafika/darky/darek6.png" alt="darek">
-    <img class ="obr18" src="grafika/darky/darek7.png" alt="darek">
-    
-   
-      
+    <div class="column_main">
+        <img id="img1" class ="obr1" src="grafika/darky/darek10.png" alt="darek" id="1" jmeno="Petr Novák" vek="8"
+             medailonek="Medailonek Petr" prani="koloběžka" odkaz="https://sportisimo.cz" onClick="vypln_formular(this)">
+  <!--  <img class ="obr2" src="grafika/darky/darek7.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr3" src="grafika/darky/darek2.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr4" src="grafika/darky/darek3.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr5" src="grafika/darky/darek9.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr6" src="grafika/darky/darek4.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr7" src="grafika/darky/darek5.png" alt="darek"
+         jmeno="Pavel Novotný" vek="10"
+         onclick="vypln_formular(this)">
+    <img class ="obr8"src="grafika/darky/darek6.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr9"src="grafika/darky/darek7.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr10"src="grafika/darky/darek10.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr11"src="grafika/darky/darek7.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr12"src="grafika/darky/darek2.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr13"src="grafika/darky/darek3.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr14"src="grafika/darky/darek9.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr15"src="grafika/darky/darek4.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr16"src="grafika/darky/darek5.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr17"src="grafika/darky/darek6.png" alt="darek" onclick="vypln_formular(this)">
+    <img class ="obr18"src="grafika/darky/darek7.png" alt="darek" onclick="vypln_formular(this)"> -->
+
+
+
     </div>
-      
+
       <div class="column_side">
         <p><h3>Stručně o projektu:</h3></p>
             <p><i>I Vy můžete pomoci někomu udělat krásné Vánoce.</i></p>
             <p><i>Stačí se zaregistrovat výše v menu a následně vybrat kliknutím jeden z dárečků pod stromečkem.</i></p>
 
             <div class="container">
-              <form action="/action_page.php" >
-          
+              <form action="/action_page.php">
+
+              <input type="hidden" id_darce="">
+
               <label for="dite">Jméno dítěte:</label>
                 <input type="text" id="name" name="name" placeholder="Jméno..">
               <br>
-            
+
               <label for="vek">Věk:</label>
                 <input type="text" id="vek" name="vek" placeholder="Věk">
               <br>
@@ -83,12 +96,12 @@
               <input type="submit" value="Obdarovat">
               <input type="submit" value="Vybrat jiné přání">
              </div>
-             
+
             </form>
         </div>
-        
+
       </div>
-    </div>   
+    </div>
 <!-- Footer -->
 <div class = row>
       <footer class="footer">
