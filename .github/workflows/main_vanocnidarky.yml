@@ -29,7 +29,7 @@ jobs:
         with:
           name: python-app
           path: |
-            vanocnidarky2021 
+            . 
             !venv/
 
   deploy:
