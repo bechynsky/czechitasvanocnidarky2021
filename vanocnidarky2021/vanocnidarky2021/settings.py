@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-import django.apps.config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -92,8 +91,7 @@ DATABASES = {
         'USER': 'czechitas@vanoce',
         'PASSWORD': 'Cz3ch1t@s',
         'HOST': 'vanoce.postgres.database.azure.com',
-        'OPTIONS': {'sslmode': 'require'},
-        'PORT': config('DBPORT', default='5432'),
+        'OPTIONS': {'sslmode': 'require'}
     }
 }
 
