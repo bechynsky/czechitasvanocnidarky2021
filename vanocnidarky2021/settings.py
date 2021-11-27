@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+from decouple import AutoConfig
+
+config = AutoConfig(os.environ.get('DJANGO_CONFIG_ENV_DIR'))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,13 +87,17 @@ WSGI_APPLICATION = 'vanocnidarky2021.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+hostname = os.environ['DBHOST'] or "vanoce"
+user = config("DBUSER") or "czechitas"
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'vanocedarky',
-        'USER': 'czechitas@vanoce',
-        'PASSWORD': 'Cz3ch1t@s',
-        'HOST': 'vanoce.postgres.database.azure.com',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        'NAME': config('DBNAME') or "vanocedarky" ,
+        'USER': user + "@" + hostname,
+        'PASSWORD': config('DBPASS') or "Cz3ch1t@s",
+        'HOST': hostname + ".postgres.database.azure.com",
+        'PORT': config('DBPORT', default='5432'),
         'OPTIONS': {'sslmode': 'require'}
     }
 }
