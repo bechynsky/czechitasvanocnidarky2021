@@ -16,7 +16,7 @@ from decouple import AutoConfig
 
 config = AutoConfig(os.environ.get('DJANGO_CONFIG_ENV_DIR'))
 
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
+ALLOWED_HOSTS = ['vanocnidarky.azurewebsites.net','localhost','127.0.0.1']
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
