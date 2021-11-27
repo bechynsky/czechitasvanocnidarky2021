@@ -89,7 +89,6 @@ h3 {
     width: 10%;
     position: absolute;
     margin: 0;
-    overflow: auto;
 }
 
 
@@ -185,8 +184,4 @@ h3 {
 .obr18 {
     top: 94%;
     left: 35%
-}
-
-img {
-    overflow: auto;
 }
