@@ -91,7 +91,7 @@ DATABASES = {
         'USER': 'czechitas@vanoce',
         'PASSWORD': 'Cz3ch1t@s',
         'HOST': 'vanoce.postgres.database.azure.com',
-        'OPTIONS': {'sslmode': 'require'},
+        'OPTIONS': {'sslmode': 'require'}
     }
 }
 
