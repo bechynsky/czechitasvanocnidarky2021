@@ -38,8 +38,7 @@ h3 {
 .menu a:hover,
 .menu a:focus,
 .menu a:active {
-    background-color: #e7ad00ff
-    ;
+    background-color: #e7ad00ff;
 }
 
 .row:after {
@@ -56,7 +55,7 @@ h3 {
 
 .column_main {
     float: left;
-    width: 70%;
+    width: 65%;
     padding: 15px;
     height: 840px;
     background-image: url(../grafika/Stomecek1.png);
@@ -138,17 +137,17 @@ h3 {
 /*prava strana*/
 
 .obr9 {
-    top: 85%;
-    left: 60%
+    top: 80%;
+    left: 53%
 }
 
 .obr10 {
-    top: 85%;
-    left: 54%
+    top: 83%;
+    left: 52%
 }
 
 .obr11 {
-    top: 88%;
+    top: 87%;
     left: 53%
 }
 
