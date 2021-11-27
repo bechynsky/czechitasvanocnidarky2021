@@ -2,21 +2,18 @@ body {
     font-size: 20px;
     line-height: 1.5;
     margin: 0;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 h1 {
     font-size: 60px;
+    font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
-}
-
-h2 {
-    font-size: 48px;
-    text-align: center;
-    margin-top: 0px;
 }
 
 h3 {
     font-size: 24px;
+    font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
 }
 
@@ -24,7 +21,7 @@ h3 {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #282425;
+    background-color: #df649dff;
 }
 
 .menu li {
@@ -41,48 +38,175 @@ h3 {
 .menu a:hover,
 .menu a:focus,
 .menu a:active {
-    background-color: #756158;
+    background-color: #e7ad00ff;
 }
 
 .row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
-  .column {
+.column {
     float: left;
     padding: 10px;
-  }
- .column.main {
-    float: left;
-    width: 75%;
-    padding: 15px;
-  }
+    margin: 0;
+}
 
-  .column.side {
+.column_main {
+    float: left;
+    width: 65%;
+    padding: 15px;
+    height: 870px;
+    background-image: url(../grafika/Stomecek1.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: 50px;
+    margin: 0;
+    padding: 20px;
+    overflow: auto
+}
+
+.column_side {
     float: right;
-    width: 25%;
+    width: 30%;
     padding: 15px;
     text-align: left;
-  }
+    margin: 0;
+}
 
-
-  .footer {
+.footer {
     font-size: 12px;
     display: block;
     text-align: center;
     padding: 3px;
-    background-color: #282425;
-    color: white;;
-  }
-
-.strom_prani img {}
-.stromecek {
-    margin: 0
+    background-color: #df649dff;
+    color: white;
+    ;
 }
 
-.login {
-    padding: 15px;
+.column_main img {
+    width: 10%;
+    position: absolute;
+    margin: 0;
 }
 
+img {
+    overflow: auto
+}
+
+
+/*leva strana*/
+
+.obr1 {
+    top: 85%;
+    left: 5%
+}
+
+.obr2 {
+    top: 87%;
+    left: 2%
+}
+
+.obr3 {
+    top: 90%;
+    left: 8%
+}
+
+.obr4 {
+    top: 90%;
+    left: 12%
+}
+
+.obr5 {
+    top: 90%;
+    left: 18%
+}
+
+.obr6 {
+    top: 93%;
+    left: 22%
+}
+
+.obr7 {
+    top: 90%;
+    left: 30%
+}
+
+.obr8 {
+    top: 95%;
+    left: 29%
+}
+
+
+/*prava strana*/
+
+.obr9 {
+    top: 80%;
+    left: 53%
+}
+
+.obr10 {
+    top: 83%;
+    left: 52%
+}
+
+.obr11 {
+    top: 87%;
+    left: 53%
+}
+
+.obr12 {
+    top: 87%;
+    left: 46%
+}
+
+.obr13 {
+    top: 90%;
+    left: 47%
+}
+
+.obr14 {
+    top: 88%;
+    left: 42%
+}
+
+.obr15 {
+    top: 92%;
+    left: 45%
+}
+
+.obr16 {
+    top: 92%;
+    left: 40%
+}
+
+.obr17 {
+    top: 94%;
+    left: 40%
+}
+
+.obr18 {
+    top: 94%;
+    left: 35%;
+}
+
+img {
+    overflow: auto;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding: 20px;
+    visibility: visible;
+}
+
+.skryj {
+    display: none
+}
+
+.form {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
